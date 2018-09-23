@@ -22,4 +22,4 @@ composants suivants :
 * L’annuaire des numéros ADN.
 * L’annuaire des numéros FDN.
 
-![Alt text](javacard.png)
+![javacard](https://user-images.githubusercontent.com/24505588/45932658-bef0bd00-bf7f-11e8-8bdb-098d7959c801.png)
