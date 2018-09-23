@@ -56,7 +56,7 @@ public class Interface_SIM extends JFrame {
 		//cmmd_GSM=new byte[]{(byte)0xA0,(byte)0xA4,(byte)0x00,(byte)0x00,(byte)0x02,(byte)0x7F,(byte)0x20};
 		cmd=new Commande_Reponse(cmmd_GSM);
 		
-		setTitle(" Lotfi - Bouri - PROJET - Carte a puce GSM -");
+		setTitle(" Bouri - PROJET - Carte a puce GSM -");
 		setSize(500,500);
 		setResizable(false);
 		setLocationRelativeTo(null);
