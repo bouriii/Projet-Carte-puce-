@@ -56,12 +56,11 @@ public class Commande_Reponse {
 		else{
 			try{
 				if(!card.isCardPresent()){
-					System.out.println("Inserer une carte");
+					System.out.println("Inserez une carte");
 					card.waitForCardPresent(0);
 				}
-				// etablisson la connexion avec la carte
 				c=card.connect("*");
-				// ouvrir un canal 
+				// ouverture d'un canal 
 				canal=c.getBasicChannel();
 				/*	CommandAPDU commande= new CommandAPDU(
 					new byte[]{(byte)0xA0,(byte)0x20,(byte)0x00,(byte)0x01,(byte)0x08,(byte)0x30,(byte)0x30,(byte)0x30,(byte)0x30,(byte)0xFF,(byte)0xFF,(byte)0xFF,(byte)0xFF});
@@ -103,7 +102,7 @@ public class Commande_Reponse {
 		
 		
 		
-		length=new Util().calcule_taille_donnée((byte)response.getSW());
+		length=new Util().calcule_taille_donnÃ©e((byte)response.getSW());
 		byte w=(byte)response.getSW();
 		commande= new CommandAPDU(new byte[]{(byte)0xA0,(byte)0xC0,(byte)0x00,(byte)0x00,w});
 		System.out.println("\nle comande test 1 . "+new Util().ByteArrayToHexString(commande.getBytes()));
@@ -193,7 +192,7 @@ public class Commande_Reponse {
 				commande= new CommandAPDU(cmd);
 				response= canal.transmit(commande);
 				
-				length=new Util().calcule_taille_donnée((byte)response.getSW());
+				length=new Util().calcule_taille_donnÃ©e((byte)response.getSW());
 				byte ww=(byte)response.getSW();
 				commande= new CommandAPDU(new byte[]{(byte)0xA0,(byte)0xC0,(byte)0x00,(byte)0x00,ww});
 				response= canal.transmit(commande);
@@ -223,7 +222,7 @@ public class Commande_Reponse {
 					commande= new CommandAPDU(cmd);
 					response= canal.transmit(commande);
 					
-					length=new Util().calcule_taille_donnée((byte)response.getSW());
+					length=new Util().calcule_taille_donnÃ©e((byte)response.getSW());
 					byte ww=(byte)response.getSW();
 					commande= new CommandAPDU(new byte[]{(byte)0xA0,(byte)0xC0,(byte)0x00,(byte)0x00,ww});
 					comande+="\n  Commande         : "+this.ToString();
@@ -246,7 +245,7 @@ public class Commande_Reponse {
 				commande= new CommandAPDU(cmd);
 				response= canal.transmit(commande);
 				
-				length=new Util().calcule_taille_donnée((byte)response.getSW());
+				length=new Util().calcule_taille_donnÃ©e((byte)response.getSW());
 				byte ww=(byte)response.getSW();
 				commande= new CommandAPDU(new byte[]{(byte)0xA0,(byte)0xC0,(byte)0x00,(byte)0x00,ww});
 				response= canal.transmit(commande);
