@@ -13,11 +13,12 @@ II. Contexte du projet
 L’objectif du projet est de développer une application en Java permettant d’analyser
 les données de la carte SIM pour visualiser sous une interface graphique les
 composants suivants :
- Les contacts du répertoire.
- Les messages texte SMS dans la SIM.
- Les services de nom de fournisseur.
- La table de services SIM.
- Le numéro d’identification de la carte.
- L’information IMSI.
- L’annuaire des numéros ADN.
- L’annuaire des numéros FDN.
+Les contacts du répertoire.
+Les messages texte SMS dans la SIM.
+Les services de nom de fournisseur.
+La table de services SIM.
+Le numéro d’identification de la carte.
+L’information IMSI.
+L’annuaire des numéros ADN.
+L’annuaire des numéros FDN.
+
