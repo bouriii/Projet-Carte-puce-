@@ -4,7 +4,6 @@
 /*         Date       : 03/2017                                      			      */
 
 package fr.cryptis.SIM;
-
 import java.util.List;
 
 import javax.smartcardio.Card;
