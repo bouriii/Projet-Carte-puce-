@@ -14,12 +14,12 @@ public class Util {
 	public static String ByteArrayToHexString(byte[] bytes) {
 		
         final char[] hexArray = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-        char[] hexChars = new char[bytes.length * 2]; // Each byte has two hex characters (nibbles)
+        char[] hexChars = new char[bytes.length * 2]; 
         int v;
         for (int j = 0; j < bytes.length; j++) {
-            v = bytes[j] & 0xFF; // Cast bytes[j] to int, treating as unsigned value
-            hexChars[j * 2] = hexArray[v >>> 4]; // Select hex character from upper nibble
-            hexChars[j * 2 + 1] = hexArray[v & 0x0F]; // Select hex character from lower nibble
+            v = bytes[j] & 0xFF;
+            hexChars[j * 2] = hexArray[v >>> 4]; 
+            hexChars[j * 2 + 1] = hexArray[v & 0x0F];
         }
         return new String(hexChars);
     }	
@@ -28,7 +28,7 @@ public class Util {
 	public static byte[] HexStringToByteArray(String s) throws IllegalArgumentException {
 		int len = s.length();
 		if (len % 2 == 1) {
-			throw new IllegalArgumentException("Hex string must have even number of characters");
+			throw new IllegalArgumentException("erreur");
 		}
 		byte[] data = new byte[len / 2]; 
 		for (int i = 0; i< len;i += 2) {
@@ -55,7 +55,7 @@ public class Util {
 		
 	}
 	
-	public static int calcule_taille_donnée(Byte d){
+	public static int calcule_taille_donnÃ©e(Byte d){
 		
 		
 	
@@ -91,11 +91,11 @@ public class Util {
 		String info="";
 		if((b & 0x80) == 0x80){
 			service[0]=1;
-			info+="\nLe service n 1 : permet la désativation du code PIN utilisateur (CHV1) : est present";
+			info+="\nLe service n 1 : permet la dÃ©sactivation du code PIN d'utilisateur (CHV1) : est present";
 		}
 		else{
 			service[0]=0;
-			info+="\nLe service n 1 : permet la désativation du code PIN utilisateur (CHV1) : n'est pas present";
+			info+="\nLe service n 1 : permet la dÃ©sactivation du code PIN d'utilisateur (CHV1) : n'est pas present";
 
 		}
 			
