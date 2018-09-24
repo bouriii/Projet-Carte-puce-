@@ -5,7 +5,6 @@
 
 package fr.cryptis.SIM;
 import java.util.List;
-
 import javax.smartcardio.Card;
 import javax.smartcardio.CardChannel;
 import javax.smartcardio.CardException;
