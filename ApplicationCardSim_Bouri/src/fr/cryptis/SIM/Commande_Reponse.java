@@ -15,7 +15,6 @@ import javax.smartcardio.ResponseAPDU;
 import javax.smartcardio.TerminalFactory;
 
 public class Commande_Reponse {
-	
 	Card c;
 	CardChannel canal;
 	TerminalFactory  tf;
