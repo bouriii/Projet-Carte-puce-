@@ -22,8 +22,7 @@ public class Util {
             hexChars[j * 2 + 1] = hexArray[v & 0x0F];
         }
         return new String(hexChars);
-    }	
-	
+    }
 	
 	public static byte[] HexStringToByteArray(String s) throws IllegalArgumentException {
 		int len = s.length();
@@ -48,16 +47,13 @@ public class Util {
 		return new String(c);
 	}
 	
-	
 	public static int calcule_taille_2(byte [] taille_memoire){
 		
 		return taille_memoire[0]<<8 & 0xff00 | taille_memoire[1]<<0 & 0x00ff ;
 		
 	}
 	
-	public static int calcule_taille_donnée(Byte d){
-		
-		
+	public static int calcule_taille_donnée(Byte d){	
 	
 		return d.intValue();
 		
@@ -66,7 +62,6 @@ public class Util {
 	public static boolean test_poid_fort(byte b ) {
 		
 		return ( b & 0x80 ) == 0x80; 
-	
 	}
 	
 	public static String entrer_Interface(){
@@ -81,9 +76,7 @@ public class Util {
 		tmp=a;
 		a=b;
 		b=tmp;
-		
 	}
-
 	
 	public static String Services(Byte b) {
 		
@@ -99,7 +92,6 @@ public class Util {
 
 		}
 			
-		
 		if((b & 0x40) == 0x40){
 			service[1]=1;
 			info+=" ,et il est active";
@@ -118,7 +110,6 @@ public class Util {
 			info+="\nLe service n 2 : notifie la presence d'un annuaire de numero abreges (ADN) : n'est pas present";
 
 		}
-		
 		if((b & 0x10) == 0x10){
 			service[3]=1;
 			info+=" ,et il est active";
@@ -127,7 +118,6 @@ public class Util {
 			service[3]=0;
 			info+=" ,et il n'est pas active";
 		}
-		
 		if((b & 0x08) == 0x08){
 			service[4]=1;
 			info+="\nLe service n 3 : est un annuaire de numeros non abreges (FDN) : est present";
@@ -136,7 +126,6 @@ public class Util {
 			service[4]=0;
 			info+="\nLe service n 3 : est un annuaire de numeros non abreges (FDN) : n'est pas present";
 		}
-		
 		if((b & 0x04) == 0x04){
 			service[5]=1;
 			info+=" ,et il est active";
