@@ -86,14 +86,14 @@ public class Commande_Reponse {
 		length=new Util().calcule_taille_donnée((byte)response.getSW());
 		byte w=(byte)response.getSW();
 		commande= new CommandAPDU(new byte[]{(byte)0xA0,(byte)0xC0,(byte)0x00,(byte)0x00,w});
-		System.out.println("\nle comande test 1 . "+new Util().ByteArrayToHexString(commande.getBytes()));
+		System.out.println("\nla commande test 1 . "+new Util().ByteArrayToHexString(commande.getBytes()));
 		comande+="\n\nCommande : "+this.ToString();
 		response= canal.transmit(commande);
 		if( new analyse().presentation_pin == true){
 			commande= new CommandAPDU(this.cmmd[10]);
-			System.out.println("\n\n ui ici commande PIN :  "+new Util().ByteArrayToHexString(cmmd[10]));
+			System.out.println("\n\n ui ici la commande PIN :  "+new Util().ByteArrayToHexString(cmmd[10]));
 			response2=canal.transmit(commande);
-			System.out.println("\n\n ui ici commmande passe le test  "+new Util().ByteArrayToHexString(response2.getBytes()));
+			System.out.println("\n\n ui ici la commmande passe le test  "+new Util().ByteArrayToHexString(response2.getBytes()));
 			new analyse().presentation_pin = false;
 		}
 		System.out.println(" reponse test 1 : "+new Util().ByteArrayToHexString(response.getBytes()));
@@ -142,11 +142,11 @@ public class Commande_Reponse {
 				comande+="\n\nCommande : "+this.ToString();
 				response= canal.transmit(commande);
 				comande+="\nReponse     : "+this.response_SIM();
-				System.out.println(" Verification la commande est : "+new Util().ByteArrayToHexString(cmd));
+				System.out.println(" Verification : la commande est : "+new Util().ByteArrayToHexString(cmd));
 				commande= new CommandAPDU(new byte[]{(byte)0xA0,(byte)0xB0,(byte)0x00,(byte)0x00,response1.getBytes()[3]});
 				comande+="\n\nCommande : "+this.ToString();
 				response= canal.transmit(commande);
-				System.out.println("\n Verification de la reponse  : "+this.response_SIM());
+				System.out.println("\n Verification : de la reponse  : "+this.response_SIM());
 				comande+="\nReponse     : "+this.response_SIM();
 			}
 		}}else if(SMS){
